@@ -1,0 +1,22 @@
+<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='paypal.css') }}">
+<title>Chant</title>
+
+<body>
+    <h1>Chant</h1>
+
+    <form method="POST">
+
+        <div class="section">
+            <h3>Post</h3>
+            <textarea name="message"></textarea><br>
+            <input type="submit">
+        </div><br>
+
+    </form>
+
+    {% for entry in entries %}
+        <div class="section">
+            {{ entry.args.From }}
+        </div><br>
+    {% endfor %}
+</body>
